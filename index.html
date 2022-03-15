@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <style>
+        /* @font-face {font-display: swap;font-family: "CircularSTD";src: url(./font/CircularStd-Book.otf); font-weight: 400;} */
+        @font-face {font-display: swap;font-family: "GT-Walsheim";src: url(./fonts/GT-Walsheim-Regular.woff2), url(./fonts/GT-Walsheim-Regular.woff);font-weight: 300;}
+        @font-face {font-display: swap;font-family: "GT-Walsheim";src: url(./fonts/GT-Walsheim-Medium.woff2), url(./fonts/GT-Walsheim-Medium.woff);font-weight: 500;}
+        /* @font-face {font-display: swap;font-family: "GT-Walsheim";src: url(./fonts/GT-Walsheim-Bold.woff2), url(./fonts/GT-Walsheim-Bold.woff);font-weight: 700;} */
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            font-family: "GT-Walsheim";
+        }
+        .card {
+            padding: 10px 10px 15px 15px;
+            border-radius: 15px;
+            position: relative;
+            min-height: 70px;
+            background-image: url(./img/Pokeball.svg);
+            background-repeat: no-repeat;
+            background-size: 40%;
+            background-position: right bottom;
+            filter: drop-shadow(2px 2px 2px rgb(0,0,0,.2));
+        }
+
+        .card h2{
+            text-align: end;
+            color: rgb(255,255,255,.6);
+            font-size: 13px;
+            font-weight: 500;
+            filter: drop-shadow(2px 2px 2px rgb(0,0,0,.2));
+        }
+        .card_bg_type{
+            background-color: #48D0B0;
+        }
+        .card_bg_type_fire{
+            background-color: #FB6C6C;
+        }
+        .card_bg_type_water{
+            background-color: #76BDFE;
+        }
+        .card_bg_type_plant{
+            background-color: #AEDF78;
+        }
+        .card_description {
+            display: flex;
+            flex-direction: column;
+        }
+        .card_description h3 {
+            margin: 0;
+            color: #fff;
+            font-size: 13px;
+            text-transform: capitalize;
+            font-weight: 500;
+            filter: drop-shadow(2px 2px 2px rgb(0,0,0,.2));
+        }
+        .card_description_types {
+            display: flex;
+            flex-direction: column;
+            padding-top: 12px;
+            grid-gap: 4px;
+        }
+        .card_description_types_bg {
+            color: #fff;
+            font-size: 9px;
+            font-weight: 300;
+            background-color: rgba(255,255,230,.4);
+            border-radius: 999px;
+            text-align: center;
+            padding: 4px 10px;
+            text-transform: capitalize;
+            place-self: flex-start;
+            filter: drop-shadow(2px 2px 2px rgb(0,0,0,.2));
+        }
+        .card img {
+            position: absolute;
+            right: -15px;
+            bottom: -5px;
+            filter: drop-shadow(2px 2px 2px rgb(0,0,0,.4));
+        }
+
+        .card_column ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+            grid-gap: 17px;
+            gap: 17px;
+            list-style: none;
+            padding: 17px 17px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="card_column">
+        <ul>
+            <li>
+                <div class="card card_bg_type">
+                    <h2>#001</h2>
+                    <div class="card_description">
+                        <h3>bulbasaur</h3>
+                        <div class="card_description_types">
+                            <span class="card_description_types_bg">grass</span>
+                            <span class="card_description_types_bg">poison</span>
+                        </div>
+                    </div>
+                    <img
+                        src="./img/pokemones/1.svg"
+                        alt="bulbasaur" width="80" height="80"
+                    >
+                </div>
+            </li>
+            <li>
+                <div class="card card_bg_type">
+                    <h2>#002</h2>
+                    <div class="card_description">
+                        <h3>ivysaur</h3>
+                        <div class="card_description_types">
+                            <span class="card_description_types_bg">grass</span>
+                            <span class="card_description_types_bg">poison</span>
+                        </div>
+                    </div>
+                    <img
+                        src="./img/pokemones/2.svg"
+                        alt="bulbasaur" width="80" height="80"
+                    >
+                </div>
+            </li>
+            <li>
+                <div class="card card_bg_type">
+                    <h2>#003</h2>
+                    <div class="card_description">
+                        <h3>venusaur</h3>
+                        <div class="card_description_types">
+                            <span class="card_description_types_bg">grass</span>
+                            <span class="card_description_types_bg">poison</span>
+                        </div>
+                    </div>
+                    <img
+                        src="./img/pokemones/3.svg"
+                        alt="bulbasaur" width="80" height="80"
+                    >
+                </div>
+            </li>
+            <li>
+                <div class="card card_bg_type_fire">
+                    <h2>#004</h2>
+                    <div class="card_description">
+                        <h3>charmander</h3>
+                        <div class="card_description_types">
+                            <span class="card_description_types_bg">grass</span>
+                            <span class="card_description_types_bg">poison</span>
+                        </div>
+                    </div>
+                    <img
+                        src="./img/pokemones/4.svg"
+                        alt="bulbasaur" width="80" height="80"
+                    >
+                </div>
+            </li>
+            <li>
+                <div class="card card_bg_type_fire">
+                    <h2>#005</h2>
+                    <div class="card_description">
+                        <h3>charmeleon</h3>
+                        <div class="card_description_types">
+                            <span class="card_description_types_bg">grass</span>
+                            <span class="card_description_types_bg">poison</span>
+                        </div>
+                    </div>
+                    <img
+                        src="./img/pokemones/5.svg"
+                        alt="bulbasaur" width="80" height="80"
+                    >
+                </div>
+            </li>
+            <li>
+                <div class="card card_bg_type_fire">
+                    <h2>#006</h2>
+                    <div class="card_description">
+                        <h3>charizard</h3>
+                        <div class="card_description_types">
+                            <span class="card_description_types_bg">grass</span>
+                            <span class="card_description_types_bg">poison</span>
+                        </div>
+                    </div>
+                    <img
+                        src="./img/pokemones/6.svg"
+                        alt="bulbasaur" width="80" height="80"
+                    >
+                </div>
+            </li>
+            <li>
+                <div class="card card_bg_type_water">
+                    <h2>#007</h2>
+                    <div class="card_description">
+                        <h3>squirtle</h3>
+                        <div class="card_description_types">
+                            <span class="card_description_types_bg">grass</span>
+                            <span class="card_description_types_bg">poison</span>
+                        </div>
+                    </div>
+                    <img
+                        src="./img/pokemones/7.svg"
+                        alt="bulbasaur" width="80" height="80"
+                    >
+                </div>
+            </li>
+            <li>
+                <div class="card card_bg_type_water">
+                    <h2>#008</h2>
+                    <div class="card_description">
+                        <h3>wartortle</h3>
+                        <div class="card_description_types">
+                            <span class="card_description_types_bg">grass</span>
+                            <span class="card_description_types_bg">poison</span>
+                        </div>
+                    </div>
+                    <img
+                        src="./img/pokemones/8.svg"
+                        alt="bulbasaur" width="80" height="80"
+                    >
+                </div>
+            </li>
+            <li>
+                <div class="card card_bg_type_water">
+                    <h2>#009</h2>
+                    <div class="card_description">
+                        <h3>blastoise</h3>
+                        <div class="card_description_types">
+                            <span class="card_description_types_bg">grass</span>
+                            <span class="card_description_types_bg">poison</span>
+                        </div>
+                    </div>
+                    <img
+                        src="./img/pokemones/9.svg"
+                        alt="bulbasaur" width="80" height="80"
+                    >
+                </div>
+            </li>
+            <li>
+                <div class="card card_bg_type_plant">
+                    <h2>#010</h2>
+                    <div class="card_description">
+                        <h3>caterpie</h3>
+                        <div class="card_description_types">
+                            <span class="card_description_types_bg">grass</span>
+                            <span class="card_description_types_bg">poison</span>
+                        </div>
+                    </div>
+                    <img
+                        src="./img/pokemones/10.svg"
+                        alt="bulbasaur" width="80" height="80"
+                    >
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+    
+    
+</body>
+
+</html>
