@@ -23,8 +23,19 @@
             box-sizing: border-box;
         }
 
+        a{
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
         body{
             font-family: "GT-Walsheim";
+            
         }
         .card {
             padding: 10px 10px 15px 15px;
@@ -178,12 +189,65 @@
             background-position: top right;
         }
 
+
+        /*  */
+
+       
+        /*---pagination---*/
+        .pagination {
+            border-top: 1px solid #fff;
+            text-align: center;
+            margin-top: 100px;
+            position: relative;
+            z-index: 2;
+        }
+        .pagination ul li{
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: center;
+        }
+        .pagination li a{
+            color: #fff;
+            display: inline-block;
+            font-size: 14px;
+            background: #26272a;
+            padding: 10px 10px;
+            margin: 0 4px;
+            border-radius: 20px;
+        }
+        .pagination li a svg {
+            width: 18px;
+            position: relative;
+            top: 5px;
+        }
+        .pagination li a.prev svg {
+            margin-right: 8px;
+        }
+        .pagination li a.next svg {
+            margin-left: 8px;
+        }
+        .pagination li a.active,
+        .pagination li a:hover{
+            background: linear-gradient(280.33deg, rgba(230, 69, 0, 0.81) -74.81%, rgba(255, 92, 0, 0.79) -7.35%, #FF9921 110.27%), #FE7825;
+        }
+
+        @media (max-width: 767px){
+        .pagination ul li {
+            flex-wrap: wrap;
+        }}
+        @media (max-width: 767px){
+        .pagination li a {
+            margin: 0 4px 8px 4px;
+            padding: 7px 12px;
+        }}
+
     </style>
 </head>
 
 <body>
     <div class="container section-header" style="filter: drop-shadow(2px 2px 2px rgb(0,0,0,.2));
-background-color: #F86D78; padding-top: 70px; padding-bottom: 20px; border-radius: 0 0 20px 20px; position: relative; overflow: hidden;">
+background-color: #F86D78; padding-top: 80px; padding-bottom: 20px; border-radius: 0 0 20px 20px; position: relative; overflow: hidden;">
         <div style="display: flex; align-items: center; padding-bottom: 25px; gap: 5px;">
             <img src="./img/logo.svg" alt="" style="filter: drop-shadow(2px 2px 2px rgb(0,0,0,.15));">
             <h1 style="color:#fff; letter-spacing: .10rem; font-size: 25px; filter: drop-shadow(2px 2px 2px rgb(0,0,0,.15));">Pokemons</h1>
@@ -371,6 +435,27 @@ background-color: #F86D78; padding-top: 70px; padding-bottom: 20px; border-radiu
         </ul>
     </div>
     
+
+    <div class="pagination container">
+        <ul>
+            <li>
+                <a href="" class="prev">
+                    <!-- <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="long-arrow-alt-left" class="svg-inline--fa fa-long-arrow-alt-left fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z"></path></svg> -->
+                    Previous
+                </a>
+                <a href="">01</a>
+                <a href="" class="active">02</a>
+                <a href="">03</a>
+                <a href="">04</a>
+                <a href="">06</a>
+                <a href="">07</a>
+                <a href="">07</a>
+                <a href="" class="next">Next
+                    <!-- <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="long-arrow-alt-right" class="svg-inline--fa fa-long-arrow-alt-right fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"></path></svg>  -->
+                </a>
+            </li>
+        </ul>
+    </div>
     
 </body>
 
