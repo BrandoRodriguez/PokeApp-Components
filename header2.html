@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        body{
+            font-family: "GT-Walsheim"
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: "GT-Walsheim";
+            src: url(./fonts/GT-Walsheim-Regular.woff2), url(./fonts/GT-Walsheim-Regular.woff);
+            font-weight: 300;
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: "GT-Walsheim";
+            src: url(./fonts/GT-Walsheim-Medium.woff2), url(./fonts/GT-Walsheim-Medium.woff);
+            font-weight: 500;
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: "GT-Walsheim";
+            src: url(./fonts/GT-Walsheim-Bold.woff2), url(./fonts/GT-Walsheim-Bold.woff);
+            font-weight: 700;
+        }
+
+        .ctn-nav{
+            display: flex;
+            padding-bottom: 20px;
+            justify-content: space-between;
+            position: absolute;
+            top: 20px;
+            left: 5%;
+            right: 50px;
+            width: 90%;
+        }
+
+        .ctn-nav-logo {
+            filter: drop-shadow(2px 2px 2px rgb(68, 1, 19, .2));
+        }
+
+        h1 {
+            color: #fff;
+            letter-spacing: .10rem;
+            font-size: 30px;
+            filter: drop-shadow(2px 2px 2px rgb(68, 1, 19, .2))
+        }
+
+        .section-card {
+            position: relative;
+            height: 100vh;
+            background: #FFCA13;
+            align-items: center;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .card {
+            position: relative;
+            margin-right: auto;
+            margin-left: auto;
+            width: 90%;
+            height: 90%;
+            border-radius: 20px;
+            border: 4px solid #FEFEFD;
+            box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.27);
+            overflow: hidden;
+
+        }
+
+        .card::before {
+            content: "";
+            background-image: url(./img/Vector.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-image-wrapper {
+            position: absolute;
+            width: 100%;
+            height: 70%;
+            display: flex;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .pikachu {
+            background-image: url(./img/1.png);
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            display: block;
+            background-size: cover;
+            max-width: 389px;
+            max-height: 403px;
+        }
+
+        .bg-title {
+            position: absolute;
+            top: 18%;
+            left: 0;
+            right: 0;
+        }
+
+        .title {
+            text-align: center;
+            white-space: nowrap;
+            letter-spacing: -.02em;
+            font-size: 200px;
+            font-weight: 700;
+            transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+            color: rgba(255, 255, 255, .9);
+            font-family: "GT-Walsheim"
+        }
+
+        .content-wrapper{
+            position: absolute;
+            bottom: 40px;
+            left: 5%;
+            width: 90%;
+            z-index: 1;
+        }
+
+        .btn {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 9999px;
+            background: #7C190F;
+            color: #fff;
+            font-size: 16px;
+        }
+
+
+        @media (max-width: 768px) {
+            .bg-title {
+                transform: rotate(-90deg);
+                transform-origin: left bottom;
+                left: calc(100% - -20px);
+                bottom: 15px;
+                top: auto;
+            }
+            .title {
+                font-size: 100px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .ctn-nav {
+                padding-bottom: 25px;
+                top: 50px;
+            }
+
+            .card {
+                width: 980px;
+                height: 640px;
+            }
+
+            .hero-image-wrapper {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                top: -50px;
+            }
+
+            .pikachu {
+                right: 70px;
+                max-width: 589px;
+                max-height: 623px;
+            }
+     
+            .content-wrapper{
+                position: absolute;
+                bottom: 70px;
+                left: 5%;
+                width: 40%;
+             }
+             
+            .title {
+                font-size: 249px;
+            }
+
+        }
+
+        @media (min-width: 1280px) {
+            .card {
+                width: 1180px;
+                height: 680px;
+            }
+
+            .title {
+                font-size: 300px;
+            }
+
+            .pikachu {
+                max-width: 649px;
+                max-height: 690px;
+                right: 150px;
+            }
+
+        }
+
+        @media (min-width: 1400px) {
+            .card {
+                width: 1280px;
+                height: 740px;
+            }
+
+            .title {
+                font-size: 325px;
+            }
+
+            .pikachu {
+                max-width: 669px;
+                max-height: 710px;
+                right: 500px;
+            }
+            
+        }
+
+        .badge {
+            letter-spacing: 1px;
+            color: #000;
+            margin-bottom: 1em;
+            align-items: center;
+            display: flex;
+            gap: 5px;
+            text-transform: uppercase;
+            font-size: 10px;
+        }
+
+        .badge span {
+            border: 1px solid rgba(92, 91, 91, var(--tw-border-opacity));
+            --tw-border-opacity: .3;
+            padding: 3px 7px;
+            border-radius: 999px;
+            color: #fff;
+            background-color: #7C190F;
+        }
+        h2{
+            color: #7C190F;
+            font-size: 40px;
+            padding-bottom: 15px;
+        }
+      
+        .btn1 {
+            border-radius: 100%;
+            align-items: center;
+            display: flex;
+            width: 30px;
+            height: 30px;
+            padding: 7px;
+            background: #7C190F;
+            color: #fff;
+            z-index: 1;
+            position: relative;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="section-card">
+        <div class="hero-image-wrapper">
+            <span class="pikachu">
+            </span>
+        </div>
+        <div class="card">
+            <div style="position: relative;">
+                <div class="ctn-nav">
+                    <a href="" style="display: flex; align-items: center; gap: 10px;">
+                        <img class="ctn-nav-logo" src="./img/logo.svg" alt="">
+                        <h1>Pokemons</h1>
+                    </a>
+                    <a class="btn1" href="">
+                       <img src="./img/github.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-title">
+                <h2 class="title">
+                    Pikachu
+                </h2>
+            </div>
+            <div class="content-wrapper">
+                <span class="badge">
+                    <span>
+                        new project
+                    </span>
+                    Modern Shop
+                </span>
+                <h2>Les´t Go, Pokemons.</h2>
+                <p style="color: #440113; font-size:16px; margin-bottom: 35px;">
+                    WooCommerce. Hub provides all the tools you need to start selling online. Let your customers to experience WooCommerce at its absolute-best.
+                </p>
+                <a class="btn" href="">Explore now.
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
