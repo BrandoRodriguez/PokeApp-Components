@@ -12,6 +12,14 @@
             margin: 0;
         }
 
+        a{
+            text-decoration: none;
+        }
+
+        body{
+            font-family: "GT-Walsheim"
+        }
+
         @font-face {
             font-display: swap;
             font-family: "GT-Walsheim";
@@ -33,6 +41,28 @@
             font-weight: 700;
         }
 
+        .ctn-nav{
+            display: flex;
+            padding-bottom: 20px;
+            justify-content: space-between;
+            position: absolute;
+            top: 20px;
+            left: 5%;
+            right: 50px;
+            width: 90%;
+        }
+
+        .ctn-nav-logo {
+            filter: drop-shadow(2px 2px 2px rgb(68, 1, 19, .5));
+        }
+
+        h1 {
+            color: #fff;
+            letter-spacing: .10rem;
+            font-size: 30px;
+            filter: drop-shadow(2px 2px 2px rgb(68, 1, 19, .5))
+        }
+
         .section-card {
             position: relative;
             height: 100vh;
@@ -52,9 +82,10 @@
             border-radius: 20px;
             border: 4px solid #FEFEFD;
             box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.27);
-            
+
         }
-        .card::before{
+
+        .card::before {
             content: "";
             background-image: url(./img/Vector.png);
             background-repeat: no-repeat;
@@ -62,6 +93,13 @@
             width: 100%;
             height: 100%;
 
+        }
+
+        .hero-image-wrapper {
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            padding-top: 70px;
         }
 
         .pikachu {
@@ -87,12 +125,35 @@
             text-align: center;
             white-space: nowrap;
             letter-spacing: -.02em;
-            font-size: 330px;
+            font-size: 342px;
             font-weight: 700;
             transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
-            color: rgba(255, 255, 255, .3);
+            color: rgba(255, 255, 255, .1);
             font-family: "GT-Walsheim"
         }
+
+        .content-wrapper{
+            position: absolute;
+            bottom: 20px;
+            left: 5%;
+            width: 90%;
+        }
+
+        .btn {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 9999px;
+            align-items: center;
+            display: flex;
+            width: 40%;
+            gap: 5px;
+            background: #5B0021;
+            color: #fff;
+            font-size: 18px;
+        }
+
 
         @media (max-width: 768px) {
             .bg-title {
@@ -110,17 +171,22 @@
             }
         }
 
-        .hero-image-wrapper {
-            position: absolute;
-            width: 100%;
-            height: 50%;
-        }
+
         @media (min-width: 500px) {
-        .hero-image-wrapper {
-            height: 70%;
+            .hero-image-wrapper {
+                height: 70%;
+                padding-top: 0px;
+            }
         }
-        }
+
         @media (min-width: 1024px) {
+            .ctn-nav {
+                padding-bottom: 25px;
+                top: 50px;
+                left: 50px;
+                right: 50px;
+            }
+
             .card {
                 width: 980px;
                 height: 640px;
@@ -129,33 +195,99 @@
             .hero-image-wrapper {
                 position: relative;
                 height: 100%;
-                align-items: center;
                 display: flex;
-                justify-content: center;
+                align-items: center;
             }
 
             .pikachu {
                 right: 100px;
             }
+     
+            .content-wrapper{
+                position: absolute;
+                bottom: 200px;
+                left: 50px;
+                width: 40%;
+             }
+            .btn {
+                width: 20%;
+             }
+
         }
+
         @media (min-width: 1280px) {
-            .card{
+            .card {
                 width: 1180px;
                 height: 680px;
             }
+
         }
+
         @media (min-width: 1400px) {
-            .card{
+            .card {
                 width: 1280px;
                 height: 740px;
             }
         }
+
+        .badge {
+            letter-spacing: 1px;
+            color: #000;
+            margin-bottom: 1em;
+            align-items: center;
+            display: flex;
+            gap: 5px;
+            text-transform: uppercase;
+            font-size: 10px;
+        }
+
+        .badge span {
+            border: 1px solid rgba(92, 91, 91, var(--tw-border-opacity));
+            --tw-border-opacity: .3;
+            padding: 3px 7px;
+            border-radius: 999px;
+            color: #fff;
+            background-color: #440113;
+        }
+        h2{
+            color: #440113;
+            font-size: 50px;
+            padding-bottom: 15px;
+        }
+      
+        .btn1 {
+            border-radius: 100%;
+            align-items: center;
+            display: flex;
+            width: 30px;
+            height: 30px;
+            padding: 7px;
+            background: #6D0110;
+            color: #fff;
+            font-size: 18px;
+            border: 1px solid rgba(255, 255, 255, .7);
+            z-index: 1;
+            position: relative;
+        }
+        
     </style>
 </head>
 
 <body>
     <div class="section-card">
         <div class="card">
+            <div style="position: relative;">
+                <div class="ctn-nav">
+                    <a href="" style="display: flex; align-items: center; gap: 10px;">
+                        <img class="ctn-nav-logo" src="./img/logo.svg" alt="">
+                        <h1>Pokemons</h1>
+                    </a>
+                    <a class="btn1" href="">
+                       <img src="./img/github.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
             <div class="bg-title">
                 <h2 class="title">
                     Pikachu
@@ -164,6 +296,19 @@
             <div class="hero-image-wrapper">
                 <span class="pikachu">
                 </span>
+            </div>
+            <div class="content-wrapper">
+                <span class="badge">
+                    <span>
+                        new project
+                    </span>
+                    Modern Shop
+                </span>
+                <h2>Les´t Go, Pokemons!.</h2>
+                <p style="color: #440113; font-size:18px; padding-bottom: 25px;">
+                    WooCommerce. Hub provides all the tools you need to start selling online. Let your customers to experience WooCommerce at its absolute-best.
+                </p>
+                <a class="btn" href="">Expore now</a>
             </div>
         </div>
     </div>
