@@ -89,6 +89,8 @@
             content: "";
             background-image: url(./img/Vector.png);
             background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
             position: absolute;
             width: 100%;
             height: 100%;
@@ -110,9 +112,8 @@
             height: 100%;
             display: block;
             background-size: cover;
-            max-width: 598px;
-            max-height: 585px;
-
+            max-width: 398px;
+            max-height: 385px;
         }
 
         .bg-title {
@@ -165,10 +166,8 @@
             }
         }
 
-        @media (max-width: 1000px) {
+        @media (max-width: 1023px) {
             .pikachu {
-                max-width: 398px;
-                max-height: 385px;
                 bottom: 0;
             }
         }
@@ -177,8 +176,6 @@
             .ctn-nav {
                 padding-bottom: 25px;
                 top: 50px;
-                left: 50px;
-                right: 50px;
             }
 
             .card {
@@ -194,13 +191,15 @@
             }
 
             .pikachu {
-                right: 100px;
+                right: 70px;
+                max-width: 498px;
+                max-height: 485px;
             }
      
             .content-wrapper{
                 position: absolute;
                 bottom: 200px;
-                left: 50px;
+                left: 5%;
                 width: 40%;
              }
              
@@ -215,8 +214,13 @@
                 width: 1180px;
                 height: 680px;
             }
+
             .title {
                 font-size: 310px;
+            }
+
+            .pikachu {
+                right: 145px;
             }
 
         }
@@ -226,9 +230,16 @@
                 width: 1280px;
                 height: 740px;
             }
+
             .title {
                 font-size: 335px;
             }
+
+            .pikachu {
+                max-width: 598px;
+                max-height: 585px;
+            }
+            
         }
 
         .badge {
