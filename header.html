@@ -98,8 +98,9 @@
         .hero-image-wrapper {
             position: absolute;
             width: 100%;
-            height: 50%;
-            padding-top: 70px;
+            height: 60%;
+            display: flex;
+            justify-content: center;
         }
 
         .pikachu {
@@ -125,7 +126,7 @@
             text-align: center;
             white-space: nowrap;
             letter-spacing: -.02em;
-            font-size: 342px;
+            font-size: 200px;
             font-weight: 700;
             transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
             color: rgba(255, 255, 255, .1);
@@ -134,24 +135,20 @@
 
         .content-wrapper{
             position: absolute;
-            bottom: 20px;
+            bottom: 40px;
             left: 5%;
             width: 90%;
         }
 
         .btn {
-            padding-top: 15px;
-            padding-bottom: 15px;
+            padding-top: 20px;
+            padding-bottom: 20px;
             padding-left: 20px;
             padding-right: 20px;
             border-radius: 9999px;
-            align-items: center;
-            display: flex;
-            width: 28%;
-            gap: 5px;
             background: #5B0021;
             color: #fff;
-            font-size: 18px;
+            font-size: 16px;
         }
 
 
@@ -163,19 +160,16 @@
                 bottom: 15px;
                 top: auto;
             }
-        }
-
-        @media (max-width: 768px) {
             .title {
                 font-size: 100px;
             }
         }
 
-
-        @media (min-width: 500px) {
-            .hero-image-wrapper {
-                height: 70%;
-                padding-top: 0px;
+        @media (max-width: 1000px) {
+            .pikachu {
+                max-width: 398px;
+                max-height: 385px;
+                bottom: 0;
             }
         }
 
@@ -209,9 +203,10 @@
                 left: 50px;
                 width: 40%;
              }
-            .btn {
-                width: 20%;
-             }
+             
+            .title {
+                font-size: 250px;
+            }
 
         }
 
@@ -220,6 +215,9 @@
                 width: 1180px;
                 height: 680px;
             }
+            .title {
+                font-size: 310px;
+            }
 
         }
 
@@ -227,6 +225,9 @@
             .card {
                 width: 1280px;
                 height: 740px;
+            }
+            .title {
+                font-size: 335px;
             }
         }
 
@@ -264,7 +265,6 @@
             padding: 7px;
             background: #6D0110;
             color: #fff;
-            font-size: 18px;
             z-index: 1;
             position: relative;
         }
@@ -304,10 +304,11 @@
                     Modern Shop
                 </span>
                 <h2>Les´t Go, Pokemons!.</h2>
-                <p style="color: #440113; font-size:16px; padding-bottom: 25px;">
+                <p style="color: #440113; font-size:16px; margin-bottom: 35px;">
                     WooCommerce. Hub provides all the tools you need to start selling online. Let your customers to experience WooCommerce at its absolute-best.
                 </p>
-                <a class="btn" href="">Expore now</a>
+                <a class="btn" href="">Explore now.
+                </a>
             </div>
         </div>
     </div>
