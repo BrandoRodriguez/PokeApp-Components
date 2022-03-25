@@ -54,13 +54,16 @@
 
         .ctn-nav-logo {
             filter: drop-shadow(2px 2px 2px rgb(68, 1, 19, .2));
+            /* position: absolute;
+            top: -55px; */
         }
 
         h1 {
             color: #fff;
             letter-spacing: .10rem;
             font-size: 30px;
-            filter: drop-shadow(2px 2px 2px rgb(68, 1, 19, .2))
+            filter: drop-shadow(2px 2px 2px rgb(68, 1, 19, .2));
+            /* padding-left: 80px; */
         }
 
         .section-card {
@@ -231,13 +234,18 @@
             .title {
                 font-size: 325px;
             }
-
             .pikachu {
                 max-width: 669px;
                 max-height: 710px;
-                right: 500px;
+                right: 200px;
             }
             
+        }
+
+        @media (min-width:1700px){
+            .pikachu {
+                right: 500px;
+            }
         }
 
         .badge {
